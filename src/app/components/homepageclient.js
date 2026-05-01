@@ -3,55 +3,17 @@
 import { SocialIcons } from "./socialicons";
 import AnimatedText from "./animatedtext";
 import { motion } from "motion/react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { MobileView, BrowserView, isMobile } from "react-device-detect";
 import Image from "next/image";
 
 export function ClientHomepage() {
   const [hmm, setHmm] = useState(null);
-  const [membersCount, setMembersCount] = useState(null);
-  const [hasLoaded, setHasLoaded] = useState(false);
 
   function HandleHoverVid(value) {
     setHmm(value);
   }
 
-  useEffect(() => {
-    let mounted = true;
-    async function fetchMembers() {
-      const apiUrl = "/api/club/2CGUYCGUY";
-
-      try {
-        console.log("Fetching members...");
-        const res = await fetch(apiUrl, {
-          signal: AbortSignal.timeout(5000),
-        });
-
-        if (!mounted) return;
-
-        if (res.ok) {
-          const data = await res.json();
-          const list = Array.isArray(data.members) ? data.members : [];
-          console.log("Members fetched successfully:", list);
-          setMembersCount(list.length);
-          setHasLoaded(true);
-          return;
-        }
-      } catch (err) {
-        console.warn("Fetch failed:", err.message);
-      }
-
-      console.error("Fetch attempt failed");
-      if (mounted) {
-        setMembersCount(null);
-        setHasLoaded(true);
-      }
-    }
-    fetchMembers();
-    return () => {
-      mounted = false;
-    };
-  }, []);
 
   return (
     <>
@@ -107,6 +69,8 @@ export function ClientHomepage() {
                     className="w-16 h-16 rounded-full"
                     src="https://utfs.io/f/thKihuQxhYcPw3n5zcEF1bloKXeA0d3pP7RDCmGxkgNhTjMa"
                     alt="Profile Picture"
+                    width={1000}
+                    height={1000}
                     onMouseEnter={() => HandleHoverVid(10)}
                     onMouseLeave={() => HandleHoverVid(null)}
                   />
@@ -143,15 +107,8 @@ export function ClientHomepage() {
               <MobileView>
                 <AnimatedText />
               </MobileView>
-            </div>
-            {hasLoaded && membersCount !== null && membersCount < 30 && (
-              <a href={"https://link.aregus.me/club"} target="_blank">
-                <button className="font-regular-exo cursor-pointer mt-4 bg-yellow-400 rounded-xl text-black w-48 h-8">
-                  My Brawl Stars Club
-                </button>
-              </a>
-            )}
-            <SocialIcons useHmm={setHmm} />
+             </div>
+             <SocialIcons useHmm={setHmm} />
             <div className="flex flex-col items-center justify-center ml-[9%] md:ml-[7%]">
               <div
                 onMouseLeave={() => HandleHoverVid(null)}

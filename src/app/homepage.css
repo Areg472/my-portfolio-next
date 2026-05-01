@@ -8,7 +8,7 @@ a {
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: var(--font-exo-2), var(--font-geist-sans), system-ui, -apple-system, sans-serif;
     background-color: #1d1e25;
     color: #fff;
     text-align: center;

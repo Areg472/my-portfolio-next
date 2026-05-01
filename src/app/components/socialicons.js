@@ -1,19 +1,13 @@
-import "./SocialIcons.css";
 import { FaYoutube, FaGithub } from "react-icons/fa";
 import { FaBluesky, FaDiscord, FaXTwitter, FaEnvelope } from "react-icons/fa6";
-
-// eslint-disable-next-line react/prop-types
 export function SocialIcons({ useHmm }) {
   function HandleHover(value) {
     useHmm(value);
   }
 
   return (
-    <div className="socialicons mt-[18px] md:mt-[20px]">
-      <div
-        className="flex flex-row gap-2.5 md:gap-4"
-        onMouseLeave={() => HandleHover(null)}
-      >
+    <div className="flex justify-center items-center mb-5 text-2xl gap-5 mt-4 md:mt-5">
+      <div className="flex flex-row gap-2.5 md:gap-4" onMouseLeave={() => HandleHover(null)}>
         <Icon link="https://www.youtube.com/@aregthevideoeditor">
           <FaYoutube onMouseEnter={() => HandleHover(1)} />
         </Icon>
@@ -37,10 +31,14 @@ export function SocialIcons({ useHmm }) {
   );
 }
 
-// eslint-disable-next-line react/prop-types
 function Icon({ children, link }) {
   return (
-    <a href={link} target="_blank">
+    <a
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-white transition-opacity duration-200 hover:opacity-80"
+    >
       {children}
     </a>
   );
