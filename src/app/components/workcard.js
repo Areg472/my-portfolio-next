@@ -43,7 +43,7 @@ export default function Workcard({
             </a>
           </div>
         </div>
-        <div className="mt-3 grow min-h-0">
+        <div className="mt-3">
           <p className="font-regular-exo text-center">{description}</p>
         </div>
       </div>
