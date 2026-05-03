@@ -53,7 +53,7 @@ export function WorkClient() {
     }}
     animate={{ rotate: 0, scale: 1, opacity: 1 }}
   >
-    <div className="w-full font-regularExo px-4 mb-16">
+    <div className="w-full mt-10 font-regularExo px-4 mb-16">
       <WorkGrid cards={workCards} />
     </div>
   </motion.div>

@@ -14,7 +14,7 @@ export default function Workcard({
 }) {
   return (
     <motion.div whileHover={{ scale: 1.1 }} className="h-full">
-      <div className="border-2 border-dotted border-[#ffd846] rounded-md w-80 md:w-96 mt-10 p-4 flex flex-col h-full">
+      <div className="border-2 border-dotted border-[#ffd846] rounded-md w-80 md:w-96 p-4 flex flex-col h-full">
         <div className="relative rounded-2xl overflow-hidden">
           <Image
             loading="eager"
