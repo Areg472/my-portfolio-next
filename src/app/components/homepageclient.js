@@ -79,11 +79,11 @@ export function ClientHomepage() {
               </motion.div>
             </div>
 
-            <div className="relative h-18 w-full">
+            <div className="relative h-8 w-full flex items-center justify-center">
               <BrowserView>
                 {hmm ? (
                   <motion.h2
-                    className="absolute inset-0 flex items-center justify-center text-[3vh] text-center font-bold text-[#ffd000] mt-6"
+                    className="text-[3vh] mt-2 text-center font-bold text-[#ffd000]"
                     key={hmm}
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -102,13 +102,13 @@ export function ClientHomepage() {
                       (hmm === 11 && "🦜")}
                   </motion.h2>
                 ) : (
-                  <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="absolute inset-0 flex items-center mb-4 justify-center">
                     <AnimatedText />
                   </div>
                 )}
               </BrowserView>
               <MobileView>
-                <div className="absolute inset-0 flex items-center justify-center">
+                <div className="flex items-center mb-4 justify-center">
                   <AnimatedText />
                 </div>
               </MobileView>
