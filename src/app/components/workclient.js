@@ -6,21 +6,22 @@ import WorkGrid from "./workgrid.js";
 
 const workCards = [
   {
+    id: "spotimetro",
+    title: "SpotiMetro",
+    description:
+      "A website that generates a tracklist based on your metro route!",
+    link: "https://spotify-metro.aregus.me/",
+    image_link:
+      "https://file.garden/Zp_ExamEPnCWgsNn/Screenshot%202026-04-24%20at%2022-03-44%20Paris%20Metro%20-%20Metro%20Spotify%20Generator.png",
+    image_alt: "A screenshot of my spotimetro website",
+  },
+  {
     id: "ocean-plus",
     title: "Ocean+",
     description: "The ultimate Vyond and GoAnimate streaming platform!",
     link: "https://oceanbluestream.com/",
     image_alt: "Ocean+ logo",
     image_link: "https://file.garden/Zp_ExamEPnCWgsNn/logo.jpg",
-  },
-  {
-    id: "codedex-winter-hackathon-2024",
-    title: "Codédex Winter Hackathon 2024",
-    description: "A 2 day hackathon run by Codédex in December :D",
-    link: "https://new-year-hackathon.aregus.me/",
-    image_link:
-      "https://file.garden/Zp_ExamEPnCWgsNn/Screenshot%202025-10-09%20at%2009-42-40%20Areg%20travels.png",
-    image_alt: "A screenshot of my hackathon project website",
   },
   {
     id: "fun-quiz",
@@ -32,13 +33,13 @@ const workCards = [
     image_alt: "A screenshot of my fun quiz website",
   },
   {
-    id: "spotimetro",
-    title: "SpotiMetro",
-    description: "A website that generates a tracklist based on your metro route!",
-    link: "https://spotify-metro.aregus.me/",
+    id: "codedex-winter-hackathon-2024",
+    title: "Codédex Winter Hackathon 2024",
+    description: "A 2 day hackathon run by Codédex in December :D",
+    link: "https://new-year-hackathon.aregus.me/",
     image_link:
-      "https://file.garden/Zp_ExamEPnCWgsNn/Screenshot%202026-04-24%20at%2022-03-44%20Paris%20Metro%20-%20Metro%20Spotify%20Generator.png",
-    image_alt: "A screenshot of my spotimetro website",
+      "https://file.garden/Zp_ExamEPnCWgsNn/Screenshot%202025-10-09%20at%2009-42-40%20Areg%20travels.png",
+    image_alt: "A screenshot of my hackathon project website",
   },
 ];
 
