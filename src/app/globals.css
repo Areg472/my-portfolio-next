@@ -1,16 +1,84 @@
 @import "tailwindcss";
 
+@theme {
+  --font-*: initial;
+  --font-sans: Exo2;
+  --font-mono: ui-monospace, SFMono-Regular, monospace;
+  --font-cool: Exo2ExtraBold;
+  --font-bold-exo: Exo2Bold;
+  --font-regular-exo: Exo2Regular;
+  --font-bolditalic-exo: Exo2BoldItalic;
+}
+
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+
+  @font-face {
+    font-family: "Exo2";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../../public/fonts/Exo2-Regular.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "Exo2";
+    font-style: normal;
+    font-weight: 700;
+    src: url("../../public/fonts/Exo2-Bold.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "Exo2";
+    font-style: normal;
+    font-weight: 800;
+    src: url("../../public/fonts/Exo2-ExtraBold.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: Exo2ExtraBold;
+    font-style: normal;
+    font-weight: 800;
+    src: url("../../public/fonts/Exo2-ExtraBold.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "Exo2";
+    font-style: italic;
+    font-weight: 700;
+    src: url("../../public/fonts/Exo2-BoldItalic.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: Exo2Bold;
+    font-style: normal;
+    font-weight: 700;
+    src: url("../../public/fonts/Exo2-Bold.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: Exo2Regular;
+    font-style: normal;
+    font-weight: 400;
+    src: url("../../public/fonts/Exo2-Regular.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: Exo2BoldItalic;
+    font-style: italic;
+    font-weight: 700;
+    src: url("../../public/fonts/Exo2-BoldItalic.ttf") format("truetype");
+  }
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-  --font-exo: var(--font-exo-2);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -29,5 +97,5 @@ body {
   width: 100%;
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-exo-2), var(--font-geist-sans), system-ui, -apple-system, sans-serif;
+  font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
 }

@@ -28,16 +28,16 @@ export function ClientHomepage() {
         exit={{ rotate: isMobile ? 0 : -150, scale: 0, opacity: 0 }}
       >
         <div className="min-h-screen bg-[#1d1e25] text-white text-center font-sans flex flex-col items-center w-full py-[5vh]">
-          <h1 className="font-thin mb-4 text-3xl md:text-5xl text-[#ffd000]">
+          <h1 className="font-bolditalic-exo mb-4 text-3xl md:text-5xl text-[#ffd000]">
             Areg
           </h1>
 
-          <h4 className="font-thin mt-3 text-md md:text-xl text-[#cccccc]">
+          <h4 className="font-thin text-md md:text-xl text-[#cccccc] mb-[3vh]">
             A smol web dev who likes open source stuff, and programming. <br />
             Computers are cool :)
           </h4>
 
-          <div className="mt-[3vh] bg-[#26262a] rounded-[5vh] pb-[5vh] pt-[3vh] max-w-[600px] w-[90%] mx-auto lg:max-w-[700px] lg:mt-[2vh] lg:pt-[2vh]">
+          <div className="bg-[#26262a] rounded-[5vh] pb-[5vh] pt-[3vh] mt-[3vh] max-w-150 w-[90%] mx-auto lg:max-w-175 lg:mt-[2vh] lg:pt-[2vh]">
             <div className="flex justify-center items-center mb-4">
               <motion.div
                 initial={{ scale: 0.2, opacity: 0 }}
@@ -71,6 +71,7 @@ export function ClientHomepage() {
                     alt="Profile Picture"
                     width={1000}
                     height={1000}
+                    loading="eager"
                     onMouseEnter={() => HandleHoverVid(10)}
                     onMouseLeave={() => HandleHoverVid(null)}
                   />
@@ -78,11 +79,11 @@ export function ClientHomepage() {
               </motion.div>
             </div>
 
-            <div className="h-8">
+            <div className="relative h-18 w-full">
               <BrowserView>
                 {hmm ? (
                   <motion.h2
-                    className="text-[3vh] text-center font-bold text-[#ffd000]"
+                    className="absolute inset-0 flex items-center justify-center text-[3vh] text-center font-bold text-[#ffd000] mt-6"
                     key={hmm}
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -101,20 +102,24 @@ export function ClientHomepage() {
                       (hmm === 11 && "🦜")}
                   </motion.h2>
                 ) : (
-                  <AnimatedText />
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <AnimatedText />
+                  </div>
                 )}
               </BrowserView>
               <MobileView>
-                <AnimatedText />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <AnimatedText />
+                </div>
               </MobileView>
-             </div>
-             <SocialIcons useHmm={setHmm} />
+            </div>
+            <SocialIcons useHmm={setHmm} />
             <div className="flex flex-col items-center justify-center ml-[9%] md:ml-[7%]">
               <div
                 onMouseLeave={() => HandleHoverVid(null)}
                 className="flex flex-col md:flex-row gap-4"
               >
-                <div className="flex items-center justify-center w-[90%] md:w-[45%]">
+                <div className="flex flex-col items-center justify-end w-[90%] md:w-[45%]">
                   <video
                     controls
                     onMouseEnter={() => HandleHoverVid(8)}
@@ -126,10 +131,12 @@ export function ClientHomepage() {
                     />
                   </video>
                   <MobileView>
-                    <p className="font-regular-exo mt-4">Ocean+ trailer</p>
+                    <p className="font-regular-exo mt-auto pt-4">
+                      Ocean+ trailer
+                    </p>
                   </MobileView>
                 </div>
-                <div className="flex items-center justify-center w-[90%] md:w-[45%]">
+                <div className="flex flex-col items-center justify-end w-[90%] md:w-[45%]">
                   <video
                     controls
                     onMouseEnter={() => HandleHoverVid(9)}
@@ -141,7 +148,9 @@ export function ClientHomepage() {
                     />
                   </video>
                   <MobileView>
-                    <p className="font-regular-exo mt-4">Doing the Hackathon</p>
+                    <p className="font-regular-exo mt-auto pt-4">
+                      Doing the Hackathon
+                    </p>
                   </MobileView>
                 </div>
               </div>

@@ -15,7 +15,7 @@ export default function AnimatedText() {
   }, []);
 
   return (
-    <h2 className="text-l text-center mt-6">
+    <h2 className="text-[3vh] text-center mt-6 font-bold text-[#ffd000]">
       <AnimatePresence mode="wait">
         <motion.span
           key={index}
