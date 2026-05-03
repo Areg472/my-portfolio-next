@@ -3,7 +3,7 @@ const nextConfig = {
   /* config options here */
   reactCompiler: true,
   images: {
-    remotePatterns: [new URL("https://utfs.io/**")],
+    remotePatterns: [new URL("https://utfs.io/**"), new URL("https://file.garden/**")],
   },
 };
 
