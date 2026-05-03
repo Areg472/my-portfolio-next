@@ -25,7 +25,6 @@ export function ClientHomepage() {
           bounce: isMobile ? 0.2 : 0.3,
         }}
         animate={{ rotate: 0, scale: 1, opacity: 1 }}
-        exit={{ rotate: isMobile ? 0 : -150, scale: 0, opacity: 0 }}
       >
         <div className="min-h-screen bg-[#1d1e25] text-white text-center font-sans flex flex-col items-center w-full py-[5vh]">
           <h1 className="font-bolditalic-exo mb-4 text-3xl md:text-5xl text-[#ffd000]">

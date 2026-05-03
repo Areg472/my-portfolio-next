@@ -52,7 +52,6 @@ export function WorkClient() {
       bounce: isMobile ? 0.2 : 0.3,
     }}
     animate={{ rotate: 0, scale: 1, opacity: 1 }}
-    exit={{ rotate: isMobile ? 0 : -150, scale: 0, opacity: 0 }}
   >
     <div className="w-full font-regularExo px-4 mb-16">
       <WorkGrid cards={workCards} />
