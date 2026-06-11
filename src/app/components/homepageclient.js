@@ -32,7 +32,7 @@ export function ClientHomepage() {
           </h1>
 
           <h4 className="font-thin text-md md:text-xl text-[#cccccc] mb-[3vh]">
-            A smol web dev who likes open source stuff, and programming. <br />
+            A smol web dev who likes open source stuff and programming. <br />
             Computers are cool :)
           </h4>
 
