@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { SocialIcons } from "./socialicons";
 import AnimatedText from "./animatedtext";
@@ -6,6 +6,7 @@ import { motion } from "motion/react";
 import { useState } from "react";
 import { MobileView, BrowserView, isMobile } from "react-device-detect";
 import Image from "next/image";
+import Script from "next/script";
 
 export function ClientHomepage() {
   const [hmm, setHmm] = useState(null);
@@ -14,9 +15,12 @@ export function ClientHomepage() {
     setHmm(value);
   }
 
-
   return (
     <>
+      <Script
+        src="https://pagering.gideon.sh/embed.js"
+        strategy="afterInteractive"
+      />
       <motion.div
         initial={{ rotate: isMobile ? 0 : 150, scale: 0, opacity: 0 }}
         transition={{
@@ -184,6 +188,9 @@ export function ClientHomepage() {
                   Next
                 </motion.button>
               </a>
+            </div>
+            <div className="flex justify-center mt-8">
+              <pagering-link theme="dark" />
             </div>
           </div>
         </div>
