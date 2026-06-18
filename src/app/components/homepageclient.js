@@ -159,43 +159,46 @@ export function ClientHomepage() {
                 </div>
               </div>
             </div>
-            <div className="gap-4 flex flex-col lg:flex-row justify-center mt-8">
-              <a href="https://ultrafastparrot.net/prev/areg">
-                <motion.button
-                  className="border-black cursor-pointer border-2 bg-indigo-300 rounded-2xl w-52 lg:w-20 text-black h-10"
-                  whileHover={{ scale: 1.1 }}
-                  transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                >
-                  Prev
-                </motion.button>
-              </a>
-              <a href="https://ultrafastparrot.net/">
-                <motion.button
-                  className="border-black cursor-pointer border-2 bg-indigo-300 rounded-2xl w-52 lg:w-52 text-black h-10"
-                  whileHover={{ scale: 1.1 }}
-                  transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                  onMouseEnter={() => HandleHoverVid(11)}
+            <div className="mx-auto flex w-fit flex-col items-center justify-center mt-8 space-y-4 rounded-3xl px-6 py-5 shadow-none hover:shadow-md transition-all shadow-gray-500">
+              <h3 className="text-lg">Webrings!!!</h3>
+              <div className="gap-4 flex flex-col lg:flex-row justify-center">
+                <a href="https://ultrafastparrot.net/prev/areg">
+                  <motion.button
+                    className="border-black cursor-pointer border-2 bg-indigo-300 rounded-2xl w-52 lg:w-20 text-black h-10"
+                    whileHover={{ scale: 1.1 }}
+                    transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                  >
+                    Prev
+                  </motion.button>
+                </a>
+                <a href="https://ultrafastparrot.net/">
+                  <motion.button
+                    className="border-black cursor-pointer border-2 bg-indigo-300 rounded-2xl w-52 lg:w-52 text-black h-10"
+                    whileHover={{ scale: 1.1 }}
+                    transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                    onMouseEnter={() => HandleHoverVid(11)}
+                    onMouseLeave={() => HandleHoverVid(null)}
+                  >
+                    Ultra fast parrot
+                  </motion.button>
+                </a>
+                <a href="https://ultrafastparrot.net/next/areg">
+                  <motion.button
+                    className="border-black cursor-pointer border-2 bg-indigo-300 rounded-2xl w-52 lg:w-20 text-black h-10"
+                    whileHover={{ scale: 1.1 }}
+                    transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                  >
+                    Next
+                  </motion.button>
+                </a>
+              </div>
+              <div className="flex justify-center">
+                <pagering-link
+                  theme="dark"
+                  onMouseEnter={() => HandleHoverVid(12)}
                   onMouseLeave={() => HandleHoverVid(null)}
-                >
-                  Ultra fast parrot
-                </motion.button>
-              </a>
-              <a href="https://ultrafastparrot.net/next/areg">
-                <motion.button
-                  className="border-black cursor-pointer border-2 bg-indigo-300 rounded-2xl w-52 lg:w-20 text-black h-10"
-                  whileHover={{ scale: 1.1 }}
-                  transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                >
-                  Next
-                </motion.button>
-              </a>
-            </div>
-            <div className="flex justify-center mt-8">
-              <pagering-link
-                theme="dark"
-                onMouseEnter={() => HandleHoverVid(12)}
-                onMouseLeave={() => HandleHoverVid(null)}
-              />
+                />
+              </div>
             </div>
           </div>
         </div>
