@@ -102,7 +102,8 @@ export function ClientHomepage() {
                       (hmm === 8 && "Ocean+ Trailer") ||
                       (hmm === 9 && "Doing the Hackathon") ||
                       (hmm === 10 && ":3") ||
-                      (hmm === 11 && "🦜")}
+                      (hmm === 11 && "🦜") ||
+                      (hmm === 12 && "🪻")}
                   </motion.h2>
                 ) : (
                   <div className="absolute inset-0 flex items-center mb-4 justify-center">
@@ -190,7 +191,11 @@ export function ClientHomepage() {
               </a>
             </div>
             <div className="flex justify-center mt-8">
-              <pagering-link theme="dark" />
+              <pagering-link
+                theme="dark"
+                onMouseEnter={() => HandleHoverVid(12)}
+                onMouseLeave={() => HandleHoverVid(null)}
+              />
             </div>
           </div>
         </div>
