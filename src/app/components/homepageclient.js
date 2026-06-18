@@ -103,7 +103,8 @@ export function ClientHomepage() {
                       (hmm === 9 && "Doing the Hackathon") ||
                       (hmm === 10 && ":3") ||
                       (hmm === 11 && "🦜") ||
-                      (hmm === 12 && "🪻")}
+                      (hmm === 12 && "🪻") ||
+                      (hmm === 13 && "Webrings!!!")}
                   </motion.h2>
                 ) : (
                   <div className="absolute inset-0 flex items-center mb-4 justify-center">
@@ -159,8 +160,12 @@ export function ClientHomepage() {
                 </div>
               </div>
             </div>
-            <div className="mx-auto flex w-fit flex-col items-center justify-center mt-8 space-y-4 rounded-3xl px-6 py-5 shadow-none hover:shadow-md transition-all shadow-gray-500">
-              <h3 className="text-lg">Webrings!!!</h3>
+            <div
+              className="mx-auto flex w-fit flex-col items-center justify-center mt-8 space-y-4 rounded-3xl px-6 py-5 shadow-none hover:shadow-[0_0_20px_rgba(0,0,0,0.15)] transition-all shadow-gray-500"
+              onMouseEnter={() => HandleHoverVid(13)}
+              onMouseLeave={() => HandleHoverVid(null)}
+            >
+              {isMobile && <h3 className="text-lg">Webrings!!!</h3>}
               <div className="gap-4 flex flex-col lg:flex-row justify-center">
                 <a href="https://ultrafastparrot.net/prev/areg">
                   <motion.button
@@ -177,7 +182,7 @@ export function ClientHomepage() {
                     whileHover={{ scale: 1.1 }}
                     transition={{ type: "spring", stiffness: 300, damping: 20 }}
                     onMouseEnter={() => HandleHoverVid(11)}
-                    onMouseLeave={() => HandleHoverVid(null)}
+                    onMouseLeave={() => HandleHoverVid(13)}
                   >
                     Ultra fast parrot
                   </motion.button>
@@ -196,7 +201,7 @@ export function ClientHomepage() {
                 <pagering-link
                   theme="dark"
                   onMouseEnter={() => HandleHoverVid(12)}
-                  onMouseLeave={() => HandleHoverVid(null)}
+                  onMouseLeave={() => HandleHoverVid(13)}
                 />
               </div>
             </div>
