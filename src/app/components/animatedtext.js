@@ -1,14 +1,14 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 
-const texts = ["Developer", "A Duck"];
+const texts = ["Developer", "A Duck", "Web User"];
 
 export default function AnimatedText() {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setIndex((prevIndex) => (prevIndex + 1) % texts.length);
+      setIndex((prevIndex) => prevIndex + 1);
     }, 3000);
 
     return () => clearInterval(interval);
