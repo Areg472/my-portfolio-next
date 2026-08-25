@@ -1,5 +1,5 @@
 import { FaYoutube, FaGithub } from "react-icons/fa";
-import { FaBluesky, FaDiscord, FaXTwitter, FaEnvelope } from "react-icons/fa6";
+import { FaBluesky, FaMastodon, FaXTwitter, FaEnvelope } from "react-icons/fa6";
 export function SocialIcons({ useHmm }) {
   function HandleHover(value) {
     useHmm(value);
@@ -21,7 +21,7 @@ export function SocialIcons({ useHmm }) {
           <FaBluesky onMouseEnter={() => HandleHover(4)} />
         </Icon>
         <Icon link="https://mastodon.social/@aregus">
-          <FaDiscord onMouseEnter={() => HandleHover(5)} />
+          <FaMastodon onMouseEnter={() => HandleHover(5)} />
         </Icon>
         <Icon link="https://github.com/Areg472">
           <FaGithub onMouseEnter={() => HandleHover(6)} />
