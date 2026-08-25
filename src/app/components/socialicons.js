@@ -7,7 +7,10 @@ export function SocialIcons({ useHmm }) {
 
   return (
     <div className="flex justify-center items-center mb-5 text-2xl gap-5 mt-4 md:mt-5">
-      <div className="flex flex-row gap-2.5 md:gap-4" onMouseLeave={() => HandleHover(null)}>
+      <div
+        className="flex flex-row gap-2.5 md:gap-4"
+        onMouseLeave={() => HandleHover(null)}
+      >
         <Icon link="https://www.youtube.com/@aregthevideoeditor">
           <FaYoutube onMouseEnter={() => HandleHover(1)} />
         </Icon>
@@ -17,7 +20,7 @@ export function SocialIcons({ useHmm }) {
         <Icon link="https://bsky.app/profile/aregus.me">
           <FaBluesky onMouseEnter={() => HandleHover(4)} />
         </Icon>
-        <Icon link="https://discord.gg/EZUW8wW5S8">
+        <Icon link="https://mastodon.social/@aregus">
           <FaDiscord onMouseEnter={() => HandleHover(5)} />
         </Icon>
         <Icon link="https://github.com/Areg472">

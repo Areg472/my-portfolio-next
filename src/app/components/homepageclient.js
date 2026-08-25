@@ -96,7 +96,7 @@ export function ClientHomepage() {
                     {(hmm === 1 && "YouTube") ||
                       (hmm === 3 && "X") ||
                       (hmm === 4 && "BlueSky") ||
-                      (hmm === 5 && "Discord") ||
+                      (hmm === 5 && "Mastodon") ||
                       (hmm === 6 && "GitHub") ||
                       (hmm === 7 && "Contact") ||
                       (hmm === 8 && "Ocean+ Trailer") ||
