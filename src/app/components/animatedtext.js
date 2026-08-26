@@ -8,7 +8,7 @@ export default function AnimatedText() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setIndex((prevIndex) => prevIndex + 1);
+      setIndex((currentIndex) => (currentIndex >= 2 ? 0 : currentIndex + 1));
     }, 3000);
 
     return () => clearInterval(interval);

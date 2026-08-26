@@ -9,10 +9,10 @@ import Image from "next/image";
 import Script from "next/script";
 
 export function ClientHomepage() {
-  const [hmm, setHmm] = useState(null);
+  const [text, setText] = useState(null);
 
   function HandleHoverVid(value) {
-    setHmm(value);
+    setText(value);
   }
 
   return (
@@ -84,27 +84,27 @@ export function ClientHomepage() {
 
             <div className="relative h-8 w-full flex items-center justify-center">
               <BrowserView>
-                {hmm ? (
+                {text ? (
                   <motion.h2
                     className="text-[3vh] mt-2 text-center font-bold text-[#ffd000]"
-                    key={hmm}
+                    key={text}
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}
                     transition={{ duration: 0.3, ease: "easeOut" }}
                   >
-                    {(hmm === 1 && "YouTube") ||
-                      (hmm === 3 && "X") ||
-                      (hmm === 4 && "BlueSky") ||
-                      (hmm === 5 && "Mastodon") ||
-                      (hmm === 6 && "GitHub") ||
-                      (hmm === 7 && "Contact") ||
-                      (hmm === 8 && "Ocean+ Trailer") ||
-                      (hmm === 9 && "Doing the Hackathon") ||
-                      (hmm === 10 && ":3") ||
-                      (hmm === 11 && "🦜") ||
-                      (hmm === 12 && "🪻") ||
-                      (hmm === 13 && "Webrings!!!")}
+                    {(text === 1 && "YouTube") ||
+                      (text === 3 && "X") ||
+                      (text === 4 && "BlueSky") ||
+                      (text === 5 && "Mastodon") ||
+                      (text === 6 && "GitHub") ||
+                      (text === 7 && "Contact") ||
+                      (text === 8 && "Ocean+ Trailer") ||
+                      (text === 9 && "Doing the Hackathon") ||
+                      (text === 10 && ":3") ||
+                      (text === 11 && "🦜") ||
+                      (text === 12 && "🪻") ||
+                      (text === 13 && "Webrings!!!")}
                   </motion.h2>
                 ) : (
                   <div className="absolute inset-0 flex items-center mb-4 justify-center">
@@ -118,47 +118,24 @@ export function ClientHomepage() {
                 </div>
               </MobileView>
             </div>
-            <SocialIcons useHmm={setHmm} />
-            <div className="flex flex-col items-center justify-center ml-[9%] md:ml-[7%]">
-              <div
+            <SocialIcons useText={setText} />
+            <div className="mx-auto flex w-[90%] flex-col items-center justify-center md:w-[45%]">
+              <video
+                controls
+                onMouseEnter={() => HandleHoverVid(9)}
                 onMouseLeave={() => HandleHoverVid(null)}
-                className="flex flex-col md:flex-row gap-4"
+                poster="https://file.garden/Zp_ExamEPnCWgsNn/Screenshot%202025-10-09%20at%2009-29-43%20Areg.png"
               >
-                <div className="flex flex-col items-center justify-end w-[90%] md:w-[45%]">
-                  <video
-                    controls
-                    onMouseEnter={() => HandleHoverVid(8)}
-                    poster="https://file.garden/Zp_ExamEPnCWgsNn/Screenshot%202025-10-09%20at%2009-34-24%20Areg.png"
-                  >
-                    <source
-                      src="https://file.garden/Zp_ExamEPnCWgsNn/Ocean%2B%20full%20trailer.mp4"
-                      type="video/mp4"
-                    />
-                  </video>
-                  <MobileView>
-                    <p className="font-regular-exo mt-auto pt-4">
-                      Ocean+ trailer
-                    </p>
-                  </MobileView>
-                </div>
-                <div className="flex flex-col items-center justify-end w-[90%] md:w-[45%]">
-                  <video
-                    controls
-                    onMouseEnter={() => HandleHoverVid(9)}
-                    poster="https://file.garden/Zp_ExamEPnCWgsNn/Screenshot%202025-10-09%20at%2009-29-43%20Areg.png"
-                  >
-                    <source
-                      src="https://file.garden/Zp_ExamEPnCWgsNn/Doing%20the%20hackathon!.mp4"
-                      type="video/mp4"
-                    />
-                  </video>
-                  <MobileView>
-                    <p className="font-regular-exo mt-auto pt-4">
-                      Doing the Hackathon
-                    </p>
-                  </MobileView>
-                </div>
-              </div>
+                <source
+                  src="https://file.garden/Zp_ExamEPnCWgsNn/Doing%20the%20hackathon!.mp4"
+                  type="video/mp4"
+                />
+              </video>
+              <MobileView>
+                <p className="font-regular-exo mt-auto pt-4">
+                  Doing the Hackathon
+                </p>
+              </MobileView>
             </div>
             <div
               className="mx-auto flex w-fit flex-col items-center justify-center mt-8 space-y-4 rounded-3xl px-6 py-5 shadow-none hover:shadow-[0_0_20px_rgba(0,0,0,0.15)] transition-all shadow-gray-500"

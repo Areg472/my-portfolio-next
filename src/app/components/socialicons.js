@@ -1,8 +1,8 @@
 import { FaYoutube, FaGithub } from "react-icons/fa";
 import { FaBluesky, FaMastodon, FaXTwitter, FaEnvelope } from "react-icons/fa6";
-export function SocialIcons({ useHmm }) {
+export function SocialIcons({ useText }) {
   function HandleHover(value) {
-    useHmm(value);
+    useText(value);
   }
 
   return (
