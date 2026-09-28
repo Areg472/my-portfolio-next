@@ -30,6 +30,9 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} ${exo2.variable} h-full antialiased`}
     >
+      <head>
+        <link rel="me" href="https://mastodon.social/@aregus" />
+      </head>
       <body
         className="min-h-full flex flex-col pt-24 md:pt-20 text-white"
         style={{ backgroundColor: "#1d1e25" }}

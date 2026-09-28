@@ -8,11 +8,6 @@ export const metadata = {
 export default function Home() {
   return (
     <>
-      <div className="invisible">
-        <a rel="me" href="https://mastodon.social/@aregus">
-          Mastodon
-        </a>
-      </div>
       <ClientHomepage />
     </>
   );
