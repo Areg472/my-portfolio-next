@@ -7,6 +7,7 @@ const nextConfig = {
       new URL("https://utfs.io/**"),
       new URL("https://file.garden/**"),
       new URL("https://www.trulle123.se/88x31.png"),
+      new URL("https://cdn.adityan.dev/88x31"),
     ],
   },
 };

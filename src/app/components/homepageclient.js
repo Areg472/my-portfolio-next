@@ -187,36 +187,44 @@ export function ClientHomepage() {
                 />
               </div>
               <div
-                className="flex flex-col md:flex-row space-x-0 md:space-x-4"
+                className="flex flex-row space-x-4"
                 onMouseLeave={() => HandleHoverVid(13)}
               >
-                <div className="flex flex-col space-y-4">
-                  <Btn88x31
-                    src="https://file.garden/Zp_ExamEPnCWgsNn/areg88x31.png"
-                    alt="Areg's site"
-                    hoverFunc={HandleHoverVid}
-                    hoverVal={20}
-                  />
-                  <Btn88x31
-                    src="https://file.garden/Zp_ExamEPnCWgsNn/fedora2.gif"
-                    alt="Linux Fedora"
-                    hoverFunc={HandleHoverVid}
-                    hoverVal={21}
-                  />
-                  <Btn88x31
-                    src="https://file.garden/Zp_ExamEPnCWgsNn/88x31/ingo.png"
-                    alt="Ingo's site"
-                    hoverFunc={HandleHoverVid}
-                    hoverVal={22}
-                  />
-                </div>
-                <div className="flex flex-col space-y-4">
-                  <Btn88x31
-                    src="https://www.trulle123.se/88x31.png"
-                    alt="Trulle's site"
-                    hoverFunc={HandleHoverVid}
-                    hoverVal={23}
-                  />
+                <div className="flex flex-col md:flex-row space-y-4 space-x-4">
+                  <div className="flex flex-col space-y-4">
+                    <Btn88x31
+                      src="https://file.garden/Zp_ExamEPnCWgsNn/areg88x31.png"
+                      alt="Areg's site"
+                      hoverFunc={HandleHoverVid}
+                      hoverVal={20}
+                    />
+                    <Btn88x31
+                      src="https://file.garden/Zp_ExamEPnCWgsNn/fedora2.gif"
+                      alt="Linux Fedora"
+                      hoverFunc={HandleHoverVid}
+                      hoverVal={21}
+                    />
+                    <Btn88x31
+                      src="https://file.garden/Zp_ExamEPnCWgsNn/88x31/ingo.png"
+                      alt="Ingo's site"
+                      hoverFunc={HandleHoverVid}
+                      hoverVal={22}
+                    />
+                  </div>
+                  <div className="flex flex-col space-y-4">
+                    <Btn88x31
+                      src="https://www.trulle123.se/88x31.png"
+                      alt="Trulle's site"
+                      hoverFunc={HandleHoverVid}
+                      hoverVal={23}
+                    />
+                    <Btn88x31
+                      src="https://cdn.adityan.dev/88x31"
+                      alt="Aditya's site"
+                      hoverFunc={HandleHoverVid}
+                      hoverVal={24}
+                    />
+                  </div>
                 </div>
               </div>
             </div>
