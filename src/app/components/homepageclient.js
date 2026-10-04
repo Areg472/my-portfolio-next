@@ -7,6 +7,7 @@ import { useState } from "react";
 import { MobileView, BrowserView, isMobile } from "react-device-detect";
 import Image from "next/image";
 import Script from "next/script";
+import Btn88x31 from "@/app/components/88x31btn";
 
 export function ClientHomepage() {
   const [text, setText] = useState(null);
@@ -104,7 +105,11 @@ export function ClientHomepage() {
                       (text === 10 && ":3") ||
                       (text === 11 && "🦜") ||
                       (text === 12 && "🪻") ||
-                      (text === 13 && "Webrings!!!")}
+                      (text === 13 && "Webrings & Buttons!!!") ||
+                      (text === 20 && "Areg's site") ||
+                      (text === 21 && "Linux Fedora") ||
+                      (text === 22 && "Ingo's site") ||
+                      (text === 23 && "Trulle's site")}
                   </motion.h2>
                 ) : (
                   <div className="absolute inset-0 flex items-center mb-4 justify-center">
@@ -142,7 +147,7 @@ export function ClientHomepage() {
               onMouseEnter={() => HandleHoverVid(13)}
               onMouseLeave={() => HandleHoverVid(null)}
             >
-              {isMobile && <h3 className="text-lg">Webrings!!!</h3>}
+              {isMobile && <h3 className="text-lg">Webrings & Buttons!!!</h3>}
               <div className="gap-4 flex flex-col lg:flex-row justify-center">
                 <a href="https://ultrafastparrot.net/prev/areg">
                   <motion.button
@@ -180,6 +185,39 @@ export function ClientHomepage() {
                   onMouseEnter={() => HandleHoverVid(12)}
                   onMouseLeave={() => HandleHoverVid(13)}
                 />
+              </div>
+              <div
+                className="flex flex-col md:flex-row space-x-0 md:space-x-4"
+                onMouseLeave={() => HandleHoverVid(13)}
+              >
+                <div className="flex flex-col space-y-4">
+                  <Btn88x31
+                    src="https://file.garden/Zp_ExamEPnCWgsNn/areg88x31.png"
+                    alt="Areg's site"
+                    hoverFunc={HandleHoverVid}
+                    hoverVal={20}
+                  />
+                  <Btn88x31
+                    src="https://file.garden/Zp_ExamEPnCWgsNn/fedora2.gif"
+                    alt="Linux Fedora"
+                    hoverFunc={HandleHoverVid}
+                    hoverVal={21}
+                  />
+                  <Btn88x31
+                    src="https://file.garden/Zp_ExamEPnCWgsNn/88x31/ingo.png"
+                    alt="Ingo's site"
+                    hoverFunc={HandleHoverVid}
+                    hoverVal={22}
+                  />
+                </div>
+                <div className="flex flex-col space-y-4">
+                  <Btn88x31
+                    src="https://www.trulle123.se/88x31.png"
+                    alt="Trulle's site"
+                    hoverFunc={HandleHoverVid}
+                    hoverVal={23}
+                  />
+                </div>
               </div>
             </div>
           </div>
