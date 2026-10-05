@@ -107,9 +107,12 @@ export function ClientHomepage() {
                       (text === 12 && "🪻") ||
                       (text === 13 && "Webrings & Buttons!!!") ||
                       (text === 20 && "Areg's site") ||
-                      (text === 21 && "Linux Fedora") ||
+                      (text === 21 && "Fedora Linux") ||
                       (text === 22 && "Ingo's site") ||
-                      (text === 23 && "Trulle's site")}
+                      (text === 23 && "Trulle's site") ||
+                      (text === 24 && "Aditya's site") ||
+                      (text === 25 && "Alex's site") ||
+                      (text === 26 && "Matei's site")}
                   </motion.h2>
                 ) : (
                   <div className="absolute inset-0 flex items-center mb-4 justify-center">
@@ -200,7 +203,7 @@ export function ClientHomepage() {
                     />
                     <Btn88x31
                       src="https://file.garden/Zp_ExamEPnCWgsNn/fedora2.gif"
-                      alt="Linux Fedora"
+                      alt="Fedora Linux"
                       hoverFunc={HandleHoverVid}
                       hoverVal={21}
                     />
@@ -223,6 +226,22 @@ export function ClientHomepage() {
                       alt="Aditya's site"
                       hoverFunc={HandleHoverVid}
                       hoverVal={24}
+                    />
+                    <Btn88x31
+                      src="https://cdn.hackclub.com/019eb7f6-9096-7359-9ae6-b5d5c4bfa22f/gateway.png"
+                      alt="Alex's site"
+                      hoverFunc={HandleHoverVid}
+                      hoverVal={25}
+                    />
+                  </div>
+                </div>
+                <div className="flex flex-col md:flex-row space-y-4 space-x-4">
+                  <div className="flex flex-col space-y-4">
+                    <Btn88x31
+                      src="https://mateishome.page//files/images/buttons/mateishomepage.png"
+                      alt="Matei's site"
+                      hoverFunc={HandleHoverVid}
+                      hoverVal={26}
                     />
                   </div>
                 </div>

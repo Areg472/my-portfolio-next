@@ -8,6 +8,8 @@ const nextConfig = {
       new URL("https://file.garden/**"),
       new URL("https://www.trulle123.se/88x31.png"),
       new URL("https://cdn.adityan.dev/88x31"),
+      new URL("https://cdn.hackclub.com/**"),
+      new URL("https://mateishome.page/**"),
     ],
   },
 };
