@@ -114,7 +114,7 @@ export function ClientHomepage() {
                       (text === 25 && "Alex's site") ||
                       (text === 26 && "Matei's site") ||
                       (text === 27 && "Hack Club") ||
-                      (text === 28 && "Github") ||
+                      (text === 28 && "Github Repo") ||
                       (text === 29 && "JavaScript")}
                   </motion.h2>
                 ) : (
@@ -262,10 +262,10 @@ export function ClientHomepage() {
                     />
                     <Btn88x31
                       src="https://file.garden/Zp_ExamEPnCWgsNn/88x31/open_source_88x31.png"
-                      alt="Github"
+                      alt="Github Repo"
                       hoverFunc={HandleHoverVid}
                       hoverVal={28}
-                      href="https://github.com/"
+                      href="https://github.com/Areg472/my-portfolio-next"
                     />
                   </div>
                   <div className="flex flex-col space-y-4">
