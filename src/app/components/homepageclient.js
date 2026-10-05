@@ -267,6 +267,8 @@ export function ClientHomepage() {
                       hoverVal={28}
                       href="https://github.com/"
                     />
+                  </div>
+                  <div className="flex flex-col space-y-4">
                     <Btn88x31
                       src="https://file.garden/Zp_ExamEPnCWgsNn/88x31/javascript_1.gif"
                       alt="JavaScript"
