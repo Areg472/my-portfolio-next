@@ -247,7 +247,7 @@ export function ClientHomepage() {
                 <div className="flex flex-col md:flex-row space-y-4 space-x-4">
                   <div className="flex flex-col space-y-4">
                     <Btn88x31
-                      src="https://mateishome.page//files/images/buttons/mateishomepage.png"
+                      src="https://file.garden/Zp_ExamEPnCWgsNn/88x31/mateishomepage.png"
                       alt="Matei's site"
                       hoverFunc={HandleHoverVid}
                       hoverVal={26}
