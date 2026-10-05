@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Btn88x31({ src, alt, href, hoverFunc, hoverVal }) {
   return (
-    <a href={href}>
+    <a href={href} target="_blank">
       <Image
         src={src}
         alt={alt}
