@@ -7,7 +7,7 @@ import { useState } from "react";
 import { MobileView, BrowserView, isMobile } from "react-device-detect";
 import Image from "next/image";
 import Script from "next/script";
-import Btn88x31 from "@/app/components/88x31btn";
+import BtnRow from "@/app/components/88x31btn";
 
 export function ClientHomepage() {
   const [text, setText] = useState(null);
@@ -196,88 +196,8 @@ export function ClientHomepage() {
                 className="flex flex-row space-x-4"
                 onMouseLeave={() => HandleHoverVid(13)}
               >
-                <div className="flex flex-col md:flex-row space-y-4 space-x-4">
-                  <div className="flex flex-col space-y-4">
-                    <Btn88x31
-                      src="https://file.garden/Zp_ExamEPnCWgsNn/areg88x31.png"
-                      alt="Areg's site"
-                      hoverFunc={HandleHoverVid}
-                      hoverVal={20}
-                      href="https://aregus.me"
-                    />
-                    <Btn88x31
-                      src="https://file.garden/Zp_ExamEPnCWgsNn/fedora2.gif"
-                      alt="Fedora Linux"
-                      hoverFunc={HandleHoverVid}
-                      hoverVal={21}
-                      href="https://fedoraproject.org"
-                    />
-                    <Btn88x31
-                      src="https://file.garden/Zp_ExamEPnCWgsNn/88x31/ingo.png"
-                      alt="Ingo's site"
-                      hoverFunc={HandleHoverVid}
-                      hoverVal={22}
-                      href="https://ingo.au"
-                    />
-                  </div>
-                  <div className="flex flex-col space-y-4">
-                    <Btn88x31
-                      src="https://www.trulle123.se/88x31.png"
-                      alt="Trulle's site"
-                      hoverFunc={HandleHoverVid}
-                      hoverVal={23}
-                      href="https://www.trulle123.se/"
-                    />
-                    <Btn88x31
-                      src="https://cdn.adityan.dev/88x31"
-                      alt="Aditya's site"
-                      hoverFunc={HandleHoverVid}
-                      hoverVal={24}
-                      href="https://adityan.dev"
-                    />
-                    <Btn88x31
-                      src="https://cdn.hackclub.com/019eb7f6-9096-7359-9ae6-b5d5c4bfa22f/gateway.png"
-                      alt="Alex's site"
-                      hoverFunc={HandleHoverVid}
-                      hoverVal={25}
-                      href="https://alexanderisashy.one/"
-                    />
-                  </div>
-                </div>
-                <div className="flex flex-col md:flex-row space-y-4 space-x-4">
-                  <div className="flex flex-col space-y-4">
-                    <Btn88x31
-                      src="https://file.garden/Zp_ExamEPnCWgsNn/88x31/mateishomepage.png"
-                      alt="Matei's site"
-                      hoverFunc={HandleHoverVid}
-                      hoverVal={26}
-                      href="https://mateishome.page/"
-                    />
-                    <Btn88x31
-                      src="https://file.garden/Zp_ExamEPnCWgsNn/88x31/hackclub.gif"
-                      alt="Hack Club"
-                      hoverFunc={HandleHoverVid}
-                      hoverVal={27}
-                      href="https://hackclub.com/"
-                    />
-                    <Btn88x31
-                      src="https://file.garden/Zp_ExamEPnCWgsNn/88x31/open_source_88x31.png"
-                      alt="Github Repo"
-                      hoverFunc={HandleHoverVid}
-                      hoverVal={28}
-                      href="https://github.com/Areg472/my-portfolio-next"
-                    />
-                  </div>
-                  <div className="flex flex-col space-y-4">
-                    <Btn88x31
-                      src="https://file.garden/Zp_ExamEPnCWgsNn/88x31/javascript_1.gif"
-                      alt="JavaScript"
-                      hoverFunc={HandleHoverVid}
-                      hoverVal={29}
-                      href="https://www.w3schools.com/Js/"
-                    />
-                  </div>
-                </div>
+                <BtnRow row={0} hoverFunc={HandleHoverVid} />
+                <BtnRow row={1} hoverFunc={HandleHoverVid} />
               </div>
             </div>
           </div>
