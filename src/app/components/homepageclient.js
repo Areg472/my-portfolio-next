@@ -112,7 +112,10 @@ export function ClientHomepage() {
                       (text === 23 && "Trulle's site") ||
                       (text === 24 && "Aditya's site") ||
                       (text === 25 && "Alex's site") ||
-                      (text === 26 && "Matei's site")}
+                      (text === 26 && "Matei's site") ||
+                      (text === 27 && "Hack Club") ||
+                      (text === 28 && "Github") ||
+                      (text === 29 && "JavaScript")}
                   </motion.h2>
                 ) : (
                   <div className="absolute inset-0 flex items-center mb-4 justify-center">
@@ -200,18 +203,21 @@ export function ClientHomepage() {
                       alt="Areg's site"
                       hoverFunc={HandleHoverVid}
                       hoverVal={20}
+                      href="https://aregus.me"
                     />
                     <Btn88x31
                       src="https://file.garden/Zp_ExamEPnCWgsNn/fedora2.gif"
                       alt="Fedora Linux"
                       hoverFunc={HandleHoverVid}
                       hoverVal={21}
+                      href="https://fedoraproject.org"
                     />
                     <Btn88x31
                       src="https://file.garden/Zp_ExamEPnCWgsNn/88x31/ingo.png"
                       alt="Ingo's site"
                       hoverFunc={HandleHoverVid}
                       hoverVal={22}
+                      href="https://ingo.au"
                     />
                   </div>
                   <div className="flex flex-col space-y-4">
@@ -220,18 +226,21 @@ export function ClientHomepage() {
                       alt="Trulle's site"
                       hoverFunc={HandleHoverVid}
                       hoverVal={23}
+                      href="https://www.trulle123.se/"
                     />
                     <Btn88x31
                       src="https://cdn.adityan.dev/88x31"
                       alt="Aditya's site"
                       hoverFunc={HandleHoverVid}
                       hoverVal={24}
+                      href="https://adityan.dev"
                     />
                     <Btn88x31
                       src="https://cdn.hackclub.com/019eb7f6-9096-7359-9ae6-b5d5c4bfa22f/gateway.png"
                       alt="Alex's site"
                       hoverFunc={HandleHoverVid}
                       hoverVal={25}
+                      href="https://alexanderisashy.one/"
                     />
                   </div>
                 </div>
@@ -242,6 +251,28 @@ export function ClientHomepage() {
                       alt="Matei's site"
                       hoverFunc={HandleHoverVid}
                       hoverVal={26}
+                      href="https://mateishome.page/"
+                    />
+                    <Btn88x31
+                      src="https://file.garden/Zp_ExamEPnCWgsNn/88x31/hackclub.gif"
+                      alt="Hack Club"
+                      hoverFunc={HandleHoverVid}
+                      hoverVal={27}
+                      href="https://hackclub.com/"
+                    />
+                    <Btn88x31
+                      src="https://file.garden/Zp_ExamEPnCWgsNn/88x31/open_source_88x31.png"
+                      alt="Github"
+                      hoverFunc={HandleHoverVid}
+                      hoverVal={28}
+                      href="https://github.com/"
+                    />
+                    <Btn88x31
+                      src="https://file.garden/Zp_ExamEPnCWgsNn/88x31/javascript_1.gif"
+                      alt="JavaScript"
+                      hoverFunc={HandleHoverVid}
+                      hoverVal={29}
+                      href="https://www.w3schools.com/Js/"
                     />
                   </div>
                 </div>
